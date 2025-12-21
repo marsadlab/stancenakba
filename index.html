@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StanceNakba 2026 - Actor and Topic-Aware Stance Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Stance<span>Nakba</span> 2026</a>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#evaluation">Evaluation</a></li>
+                <li><a href="#dates">Important Dates</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+                <li><a href="#participate">Participate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">SHARED TASK 2026</div>
+            <h1>Actor and Topic-Aware Stance Detection in Public Discourse</h1>
+            <p class="subtitle">Advancing stance detection in polarized social media discourse on the Palestinian-Israeli conflict through dual-framework analysis of actor-level alignments and cross-topic patterns.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Subtasks</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2,606</span>
+                    <span class="stat-label">Annotated Samples</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About the Task</span>
+                <h2>Research Overview</h2>
+            </div>
+            
+            <p>The StanceNakba 2026 Shared Task addresses stance detection in polarized social media discourse on the Palestinian-Israeli conflict and related regional issues. This task introduces a dual-framework approach that distinguishes between actor-level political alignments and cross-topic stance patterns across two conflict-related subjects.</p>
+
+            <p>Participants will develop models to analyze social media posts across two subtasks: <strong>Subtask A (Actor-Level Stance Detection)</strong> identifies whether authors express Pro-Palestine, Pro-Israel, or Neutral orientations in their general position toward the Palestinian-Israeli conflict, while <strong>Subtask B (Cross-Topic Stance Detection)</strong> detects Favor, Against, or Neither stances toward specific conflict-related topics: normalization with Israel and refugee presence in Jordan.</p>
+
+            <p>This dual-framework enables investigation of fundamental questions: <em>How do general political alignments (actors) relate to positions on specific issues (targets)? Can models learn generalizable stance patterns that transfer across different topics?</em></p>
+        </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section id="tasks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Challenge Details</span>
+                <h2>Task Descriptions</h2>
+            </div>
+
+            <div class="task-grid">
+                <!-- Subtask A -->
+                <div class="task-card fade-in">
+                    <span class="task-label">Subtask A</span>
+                    <h3>Actor-Level Stance Detection</h3>
+                    <p>Build a single model to classify the author's general political stance toward the Palestinian-Israeli conflict.</p>
+                    
+                    <div class="labels">
+                        <span class="label">Pro-Palestine</span>
+                        <span class="label">Pro-Israel</span>
+                        <span class="label">Neutral</span>
+                    </div>
+
+                    <h4>Dataset Details</h4>
+                    <div class="dataset-grid">
+                        <div class="dataset-item">
+                            <span class="dataset-number">1,401</span>
+                            <span class="dataset-label">Total Samples</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span class="dataset-number">English</span>
+                            <span class="dataset-label">Language</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span class="dataset-number">80/10/10</span>
+                            <span class="dataset-label">Train/Dev/Test Split</span>
+                        </div>
+                    </div>
+
+                    <h4>Examples</h4>
+                    <div class="example-box">
+                        <span class="example-label">Pro-Palestine</span>
+                        "The systematic displacement of Palestinian families from their ancestral homes represents a clear violation of international law and the right of return."
+                    </div>
+                    <div class="example-box">
+                        <span class="example-label">Pro-Israel</span>
+                        "Israel's defensive measures are necessary responses to existential threats, ensuring the safety of its citizens against terrorism."
+                    </div>
+                    <div class="example-box">
+                        <span class="example-label">Neutral</span>
+                        "The conflict involves competing territorial claims, with both populations having deep historical connections to the region."
+                    </div>
+                </div>
+
+                <!-- Subtask B -->
+                <div class="task-card fade-in">
+                    <span class="task-label">Subtask B</span>
+                    <h3>Cross-Topic Stance Detection</h3>
+                    <p>Build a unified model that predicts stance across multiple conflict-related topics.</p>
+                    
+                    <div class="labels">
+                        <span class="label">Favor</span>
+                        <span class="label">Against</span>
+                        <span class="label">Neither</span>
+                    </div>
+
+                    <h4>Dataset Details</h4>
+                    <div class="dataset-grid">
+                        <div class="dataset-item">
+                            <span class="dataset-number">1,205</span>
+                            <span class="dataset-label">Total Samples</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span class="dataset-number">Arabic</span>
+                            <span class="dataset-label">Language</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span class="dataset-number">2</span>
+                            <span class="dataset-label">Topics Covered</span>
+                        </div>
+                    </div>
+
+                    <h4>Topics</h4>
+                    <p><strong>1. Normalization with Israel</strong> (577 samples)</p>
+                    <p><strong>2. Refugee/Immigrant Presence in Jordan</strong> (628 samples)</p>
+
+                    <h4>Examples</h4>
+                    <div class="example-box arabic">
+                        <span class="example-label" style="direction: ltr;">Favor (Normalization)</span>
+                        الجامعة العربية قالت إنها لا ترى أن #التطبيع مع #إسرائيل خطوة ضد القضية الفلسطينية
+                    </div>
+                    <div class="example-box arabic">
+                        <span class="example-label" style="direction: ltr;">Against (Normalization)</span>
+                        إن قدرة الدولة على التطبيع جهارًا نهارًا مع النظام الإسرائيلي تتماشى مع قوة واستقرار نظامها المستبد
+                    </div>
+                    <div class="example-box arabic">
+                        <span class="example-label" style="direction: ltr;">Favor (Refugees)</span>
+                        لا مكان للعنصرية بالأردن اي شخص داخل الأردن يعامل معاملة ابن البلد وهاذا الشخص يمثل كل أردني شريف
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Section -->
+    <section id="evaluation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Metrics</span>
+                <h2>Evaluation Criteria</h2>
+            </div>
+
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Models will be evaluated using multiple metrics to ensure comprehensive assessment. Each subtask will have a separate leaderboard.</p>
+
+            <div class="metrics-grid">
+                <div class="metric-card primary-metric">
+                    <div class="metric-title">Primary Metric</div>
+                    <div class="metric-value">Macro-averaged F1-score</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Secondary Metric</div>
+                    <div class="metric-value">Accuracy</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Secondary Metric</div>
+                    <div class="metric-value">Precision</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Secondary Metric</div>
+                    <div class="metric-value">Recall</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section id="dates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Timeline</span>
+                <h2>Important Dates</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 1, 2026</div>
+                        <div class="timeline-event">Call for Participation</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 10, 2026</div>
+                        <div class="timeline-event">Training Set Release</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">February 10, 2026</div>
+                        <div class="timeline-event">Blind Test Set Release</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">February 17, 2026</div>
+                        <div class="timeline-event">System Submission Deadline</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">February 21, 2026</div>
+                        <div class="timeline-event">Release of Results</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 1, 2026</div>
+                        <div class="timeline-event">Paper Submission Deadline</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 15, 2026</div>
+                        <div class="timeline-event">Notification of Acceptance</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 21, 2026</div>
+                        <div class="timeline-event">Camera-Ready Deadline</div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 11–16, 2026</div>
+                        <div class="timeline-event">Workshop Date (TBC)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Engagement Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Community</span>
+                <h2>Who Should Participate</h2>
+            </div>
+
+            <p>This shared task will attract participants from <strong>stance detection</strong>, <strong>Arabic NLP</strong>, and <strong>computational social science</strong> communities by offering well-curated datasets and clear evaluation metrics for two distinct challenges.</p>
+
+            <p>Researchers can participate in either English actor-level stance detection (accessible to the general NLP community) or Arabic cross-topic stance detection (for Arabic NLP specialists), with both subtasks addressing real-world applications in understanding polarized discourse and conflict narratives on social media.</p>
+
+            <div class="dataset-grid" style="margin-top: 3rem;">
+                <div class="dataset-item">
+                    <span class="dataset-number">🎯</span>
+                    <span class="dataset-label">Stance Detection Researchers</span>
+                </div>
+                <div class="dataset-item">
+                    <span class="dataset-number">🌍</span>
+                    <span class="dataset-label">Arabic NLP Community</span>
+                </div>
+                <div class="dataset-item">
+                    <span class="dataset-number">📊</span>
+                    <span class="dataset-label">Computational Social Scientists</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizing Team Section
+    <section id="organizers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Team</span>
+                <h2>Organizing Committee</h2>
+            </div>
+
+            <div class="organizers-grid">
+                <div class="organizer-card fade-in">
+                    <div class="organizer-name">Kholoud K. Aldous</div>
+                    <div class="organizer-affiliation">Northwestern University in Qatar</div>
+                </div>
+                <div class="organizer-card fade-in">
+                    <div class="organizer-name">Md. Rafiul Biswas</div>
+                    <div class="organizer-affiliation">Hamad Bin Khalifa University, Doha, Qatar</div>
+                </div>
+                <div class="organizer-card fade-in">
+                    <div class="organizer-name">Mabrouka Bessghaier</div>
+                    <div class="organizer-affiliation">Northwestern University in Qatar</div>
+                </div>
+                <div class="organizer-card fade-in">
+                    <div class="organizer-name">Kais Attia</div>
+                    <div class="organizer-affiliation">Individual Researcher</div>
+                </div>
+                <div class="organizer-card fade-in">
+                    <div class="organizer-name">Shimaa Ibrahim</div>
+                    <div class="organizer-affiliation">Northwestern University in Qatar</div>
+                </div>
+                <div class="organizer-card fade-in">
+                    <div class="organizer-name">Wajdi Zaghouani</div>
+                    <div class="organizer-affiliation">Northwestern University in Qatar</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Organizing Team Section -->
+    <section id="organizers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Team</span>
+                <h2>Organizing Committee</h2>
+            </div>
+
+            <div class="organizers-grid">
+                <div class="organizer-card fade-in">
+                    <h4>Kholoud K. Aldous</h4>
+                    <p>Northwestern University in Qatar</p>
+                </div>
+                <div class="organizer-card fade-in">
+                    <h4>Md. Rafiul Biswas</h4>
+                    <p>Hamad Bin Khalifa University, Doha, Qatar</p>
+                </div>
+                <div class="organizer-card fade-in">
+                    <h4>Mabrouka Bessghaier</h4>
+                    <p>Northwestern University in Qatar</p>
+                </div>
+                <div class="organizer-card fade-in">
+                    <h4>Kais Attia</h4>
+                    <p>Individual Researcher</p>
+                </div>
+                <div class="organizer-card fade-in">
+                    <h4>Shimaa Ibrahim</h4>
+                    <p>Northwestern University in Qatar</p>
+                </div>
+                <div class="organizer-card fade-in">
+                    <h4>Wajdi Zaghouani</h4>
+                    <p>Northwestern University in Qatar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="participate" class="cta-section">
+        <div class="container">
+            <h2>Ready to Participate?</h2>
+            <p>Join us in advancing stance detection research and understanding polarized discourse in social media.</p>
+            <div class="cta-buttons">
+                <a href="https://forms.gle/pPA6nS7CWvuNDUjh6" target="_blank" class="btn btn-primary">Register Now</a>
+                <!-- <a href="#" class="btn btn-outline">Download Data</a> -->
+                <a href="mailto:stancenakba@gmail.com" class="btn btn-outline">Contact Organizers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 StanceNakba Shared Task. All rights reserved.</p>
+            <p>For inquiries, please contact the organizing committee.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add active state to navigation on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
