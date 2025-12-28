@@ -9,16 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="#" class="logo">Stance<span>Nakba</span> 2026</a>
+            <a href="#top" class="logo">Stance<span>Nakba</span> 2026</a>
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#tasks">Tasks</a></li>
                 <li><a href="#evaluation">Evaluation</a></li>
                 <li><a href="#dates">Important Dates</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
                 <li><a href="#organizers">Organizers</a></li>
                 <li><a href="#participate">Participate</a></li>
             </ul>
@@ -294,6 +295,153 @@
         </div>
     </section>
 
+    <!-- Guidelines Section -->
+    <section id="guidelines">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Participation Info</span>
+                <h2>Guidelines for Participating Teams</h2>
+            </div>
+
+            <div class="faq-container">
+                <!-- Participation Basics -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Who can participate in shared tasks?</h4>
+                    <p class="faq-answer">Anyone who wants to can participate, either independently or by forming a team.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Is there a fee to participate in a task?</h4>
+                    <p class="faq-answer">No, participation is completely free but at least one team member should pay to register for the conference.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">How can I sign up to participate in a task?</h4>
+                    <p class="faq-answer">Please see instructions on the website for the task (e.g., on CodaLab or other evaluation platforms).</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Can I participate in multiple shared tasks (separate competitions)?</h4>
+                    <p class="faq-answer">Yes, you can participate in multiple different tasks.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Can I participate in multiple teams under the same shared task (same competition)?</h4>
+                    <p class="faq-answer">This depends on the task. Check with the task organizers to see whether they allow an individual to be part of multiple teams within the task.</p>
+                </div>
+
+                <!-- Evaluation & Submission -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">What does "evaluation period" mean?</h4>
+                    <p class="faq-answer">The evaluation period is the time window in which the official part of each task competition takes place. Task organizers will release evaluation data to participants at the beginning of the evaluation period, and system outputs will be due before the end of the evaluation period.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">How many runs can be submitted for a task?</h4>
+                    <p class="faq-answer">This depends on the task. Task organizers often specify how many submissions by each team will be evaluated. Contact your task organizers if these details are not already stated on the task webpage.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Where can I find datasets from past shared tasks?</h4>
+                    <p class="faq-answer">Task datasets are distributed by task organizers. Check the task website or contact the organizers. Many recent tasks archive their datasets on platforms such as Github.</p>
+                </div>
+
+                <!-- Paper Requirements -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Do I need to write a paper?</h4>
+                    <p class="faq-answer">Yes, if you register and request the dataset, you agree to submit a paper. It's not just encouraged—it's a binding commitment you make when receiving the data.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">What happens if I register but don't submit a paper?</h4>
+                    <p class="faq-answer">This is strictly prohibited. You agree to register and submit a paper when requesting the dataset. Abandoning the task after receiving data may result in banning participants from future participation.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">What is the paper format?</h4>
+                    <p class="faq-answer">System papers must follow the format for short papers at NakbaNLP 2026. Papers must follow official LaTeX or Word templates, be up to 4 pages (excluding unlimited references). Check the dedicated paper submission guidelines:
+                        <br><a href="https://lrec2026.info/authors-kit" target="_blank" style="color: #2563eb;">https://lrec2026.info/authors-kit</a>
+                        <br><a href="https://softconf.com/lrec2026/nakbanlp2026" target="_blank" style="color: #2563eb;">https://softconf.com/lrec2026/nakbanlp2026</a>
+                    </p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">How should the paper title be formatted?</h4>
+                    <p class="faq-answer">Use this format: <strong>&lt;Team Name&gt; at &lt;Shared Task Name&gt;: &lt;Title of the work&gt;</strong>
+                        <br><em>Example: "Scholarly at XYZ Shared Task: LLMs in Detection for Identifying Manipulative Strategies"</em>
+                    </p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Must I cite the task overview paper?</h4>
+                    <p class="faq-answer">Yes, each team is required to cite the shared task overview paper in their system paper.</p>
+                </div>
+
+                <!-- Conference Attendance -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Must someone from my team attend the conference?</h4>
+                    <p class="faq-answer">Yes, at least one of the shared task team members should register and attend the conference.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Must papers be presented at the conference?</h4>
+                    <p class="faq-answer">Yes, all accepted papers must be presented at the conference (in-person or virtual). Papers without at least one presenting author registered by the early registration deadline may be subject to desk rejection.</p>
+                </div>
+
+                <!-- Technical Requirements -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Do I need a Softconf account?</h4>
+                    <p class="faq-answer">Yes, all participants and organizers are required to create a Softconf account.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Are the papers anonymous?</h4>
+                    <p class="faq-answer">No, shared task papers (both system and overview papers) are not anonymous.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">What happens if I exceed the page limit or miss required sections?</h4>
+                    <p class="faq-answer">Submissions that exceed length requirements will be desk rejected.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Will I need to review other papers?</h4>
+                    <p class="faq-answer">Yes, shared task teams are expected to serve as reviewers, and their reviews will be checked by one member of the shared task organizers.</p>
+                </div>
+
+                <!-- Publishing & Ethics -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Can I post my paper on arXiv?</h4>
+                    <p class="faq-answer">Yes, authors are free to submit papers to arXiv at any time. Since papers are not anonymous, this won't interfere with the review process.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Can I make changes for the camera-ready version?</h4>
+                    <p class="faq-answer">No additions/revisions or name changes are allowed after the review period for the camera-ready version.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">What if my research raises ethical concerns?</h4>
+                    <p class="faq-answer">If your research raises ethical considerations (e.g., potential for misuse), these should be discussed in the paper.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Should I release my code?</h4>
+                    <p class="faq-answer">You are highly encouraged to release the code or data used and include the URL in the paper. This promotes reproducibility.</p>
+                </div>
+
+                <!-- Contact -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">My question isn't answered here. Who should I contact?</h4>
+                    <p class="faq-answer">
+                        • <strong>For task-specific questions:</strong> Consult the task website and contact task organizers<br>
+                        • <strong>For workshop logistics:</strong> Contact the shared task organizers<br>
+                        • <strong>For Softconf technical issues:</strong> Contact Softconf support
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>    
     <!-- Organizing Team Section -->
     <section id="organizers">
         <div class="container">
