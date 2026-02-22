@@ -21,10 +21,47 @@
                 <li><a href="#dates">Important Dates</a></li>
                 <li><a href="#guidelines">Guidelines</a></li>
                 <li><a href="#organizers">Organizers</a></li>
+                <li class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle">Leaderboard</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" data-task="a" class="open-leaderboard">SubTask A</a></li>
+                        <li><a href="#" data-task="b" class="open-leaderboard">SubTask B</a></li>
+                    </ul>
+                </li>
                 <li><a href="#participate">Participate</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">SubTask A - Actor-Level Stance Detection</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="leaderboard-container">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team Name</th>
+                                <th>Macro F1</th>
+                                <th>Accuracy</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>Submission Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody">
+                            <!-- Data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -152,16 +189,16 @@
 
                     <h4>Examples</h4>
                     <div class="example-box arabic">
-                        <span class="example-label" style="direction: ltr;">Favor (Normalization)</span>
-                        الجامعة العربية قالت إنها لا ترى أن #التطبيع مع #إسرائيل خطوة ضد القضية الفلسطينية
+                        <span class="example-label">Favor</span>
+                        التطبيع مع إسرائيل سيحسن الاقتصاد ويجلب الاستثمارات للمنطقة
                     </div>
                     <div class="example-box arabic">
-                        <span class="example-label" style="direction: ltr;">Against (Normalization)</span>
-                        إن قدرة الدولة على التطبيع جهارًا نهارًا مع النظام الإسرائيلي تتماشى مع قوة واستقرار نظامها المستبد
+                        <span class="example-label">Against</span>
+                        التطبيع مع إسرائيل يعتبر خيانة لقضية فلسطين والشعب الفلسطيني
                     </div>
                     <div class="example-box arabic">
-                        <span class="example-label" style="direction: ltr;">Favor (Refugees)</span>
-                        لا مكان للعنصرية بالأردن اي شخص داخل الأردن يعامل معاملة ابن البلد وهاذا الشخص يمثل كل أردني شريف
+                        <span class="example-label">Neither</span>
+                        التطبيع مع إسرائيل هو قضية معقدة لها جوانب اقتصادية وسياسية متعددة
                     </div>
                 </div>
             </div>
@@ -172,30 +209,32 @@
     <section id="evaluation">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Metrics</span>
-                <h2>Evaluation Criteria</h2>
+                <span class="section-tag">Performance Metrics</span>
+                <h2>Evaluation Metrics</h2>
             </div>
 
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Models will be evaluated using multiple metrics to ensure comprehensive assessment. Each subtask will have a separate leaderboard.</p>
+            <p>Participants' systems will be evaluated using the following metrics:</p>
 
             <div class="metrics-grid">
                 <div class="metric-card primary-metric">
                     <div class="metric-title">Primary Metric</div>
-                    <div class="metric-value">Macro-averaged F1-score</div>
+                    <div class="metric-value">Macro F1</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-title">Secondary Metric</div>
-                    <div class="metric-value">Accuracy</div>
+                    <div class="metric-title">Accuracy</div>
+                    <div class="metric-value">✓</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-title">Secondary Metric</div>
-                    <div class="metric-value">Precision</div>
+                    <div class="metric-title">Precision</div>
+                    <div class="metric-value">✓</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-title">Secondary Metric</div>
-                    <div class="metric-value">Recall</div>
+                    <div class="metric-title">Recall</div>
+                    <div class="metric-value">✓</div>
                 </div>
             </div>
+
+            <p style="margin-top: 2rem;"><strong>Ranking:</strong> Teams will be ranked primarily by Macro F1 score. This metric is particularly suitable for multi-class problems and emphasizes balanced performance across all classes.</p>
         </div>
     </section>
 
@@ -210,86 +249,39 @@
             <div class="timeline">
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-date">January 1, 2026</div>
-                        <div class="timeline-event">Call for Participation</div>
+                        <div class="timeline-date">January 15, 2026</div>
+                        <div class="timeline-event">Training data released</div>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-date">January 10, 2026</div>
-                        <div class="timeline-event">Training Set Release</div>
+                        <div class="timeline-date">January 22, 2026</div>
+                        <div class="timeline-event">Test data released</div>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-date">February 10, 2026</div>
-                        <div class="timeline-event">Blind Test Set Release</div>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">February 17, 2026</div>
-                        <div class="timeline-event">System Submission Deadline</div>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">February 21, 2026</div>
-                        <div class="timeline-event">Release of Results</div>
+                        <div class="timeline-date">February 15, 2026</div>
+                        <div class="timeline-event">Submission deadline</div>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
                         <div class="timeline-date">March 1, 2026</div>
-                        <div class="timeline-event">Paper Submission Deadline</div>
+                        <div class="timeline-event">Results announced</div>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
                         <div class="timeline-date">March 15, 2026</div>
-                        <div class="timeline-event">Notification of Acceptance</div>
+                        <div class="timeline-event">Paper submission deadline</div>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-date">March 21, 2026</div>
-                        <div class="timeline-event">Camera-Ready Deadline</div>
+                        <div class="timeline-date">May 15, 2026</div>
+                        <div class="timeline-event">Workshop at LREC</div>
                     </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">May 11–16, 2026</div>
-                        <div class="timeline-event">Workshop Date (TBC)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Engagement Section -->
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Community</span>
-                <h2>Who Should Participate</h2>
-            </div>
-
-            <p>This shared task will attract participants from <strong>stance detection</strong>, <strong>Arabic NLP</strong>, and <strong>computational social science</strong> communities by offering well-curated datasets and clear evaluation metrics for two distinct challenges.</p>
-
-            <p>Researchers can participate in either English actor-level stance detection (accessible to the general NLP community) or Arabic cross-topic stance detection (for Arabic NLP specialists), with both subtasks addressing real-world applications in understanding polarized discourse and conflict narratives on social media.</p>
-
-            <div class="dataset-grid" style="margin-top: 3rem;">
-                <div class="dataset-item">
-                    <span class="dataset-number">🎯</span>
-                    <span class="dataset-label">Stance Detection Researchers</span>
-                </div>
-                <div class="dataset-item">
-                    <span class="dataset-number">🌍</span>
-                    <span class="dataset-label">Arabic NLP Community</span>
-                </div>
-                <div class="dataset-item">
-                    <span class="dataset-number">📊</span>
-                    <span class="dataset-label">Computational Social Scientists</span>
                 </div>
             </div>
         </div>
@@ -299,99 +291,62 @@
     <section id="guidelines">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Participation Info</span>
-                <h2>Guidelines for Participating Teams</h2>
+                <span class="section-tag">Submission Info</span>
+                <h2>Guidelines & FAQs</h2>
             </div>
 
             <div class="faq-container">
-                <!-- Participation Basics -->
+                <!-- Submission & Data -->
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">Who can participate in shared tasks?</h4>
-                    <p class="faq-answer">Anyone who wants to can participate, either independently or by forming a team.</p>
+                    <h4 class="faq-question">How do I submit my predictions?</h4>
+                    <p class="faq-answer">Submissions are made through <strong>CodaBench</strong>. Create an account, register for the shared task competition, and upload your predictions as a CSV file with the required format.</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">Is there a fee to participate in a task?</h4>
-                    <p class="faq-answer">No, participation is completely free but at least one team member should pay to register for the conference.</p>
+                    <h4 class="faq-question">What is the submission format?</h4>
+                    <p class="faq-answer">Predictions should be submitted as a CSV file with columns: <strong>ID, prediction</strong>. The prediction should be one of the class labels (Pro-Palestine/Pro-Israel/Neutral for Subtask A; Favor/Against/Neither for Subtask B).</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">How can I sign up to participate in a task?</h4>
-                    <p class="faq-answer">Please see instructions on the website for the task (e.g., on CodaLab or other evaluation platforms).</p>
+                    <h4 class="faq-question">Can I download the datasets?</h4>
+                    <p class="faq-answer">Yes! Datasets are available on <strong><a href="https://www.codabench.org" target="_blank">CodaBench</a></strong> after registration. Both training and test datasets can be downloaded from the competition pages.</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">Can I participate in multiple shared tasks (separate competitions)?</h4>
-                    <p class="faq-answer">Yes, you can participate in multiple different tasks.</p>
+                    <h4 class="faq-question">Is external data allowed?</h4>
+                    <p class="faq-answer">Yes, participants are allowed to use pre-trained models and external datasets. However, please document all external resources used in your system paper.</p>
+                </div>
+
+                <!-- System & Technical -->
+                <div class="faq-item fade-in">
+                    <h4 class="faq-question">Can I participate as an individual?</h4>
+                    <p class="faq-answer">Yes! Teams can consist of 1-5 members. Both individual researchers and team submissions are welcome.</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">Can I participate in multiple teams under the same shared task (same competition)?</h4>
-                    <p class="faq-answer">This depends on the task. Check with the task organizers to see whether they allow an individual to be part of multiple teams within the task.</p>
-                </div>
-
-                <!-- Evaluation & Submission -->
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">What does "evaluation period" mean?</h4>
-                    <p class="faq-answer">The evaluation period is the time window in which the official part of each task competition takes place. Task organizers will release evaluation data to participants at the beginning of the evaluation period, and system outputs will be due before the end of the evaluation period.</p>
+                    <h4 class="faq-question">How many submissions can I make?</h4>
+                    <p class="faq-answer">There is no limit on the number of submissions. You can submit predictions as many times as you want to explore different approaches and improve your results.</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">How many runs can be submitted for a task?</h4>
-                    <p class="faq-answer">This depends on the task. Task organizers often specify how many submissions by each team will be evaluated. Contact your task organizers if these details are not already stated on the task webpage.</p>
+                    <h4 class="faq-question">Will my submissions be visible on the leaderboard?</h4>
+                    <p class="faq-answer">Yes, all submissions are visible on the public leaderboard with your team name. If you prefer privacy, you can make submissions private in your account settings.</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">Where can I find datasets from past shared tasks?</h4>
-                    <p class="faq-answer">Task datasets are distributed by task organizers. Check the task website or contact the organizers. Many recent tasks archive their datasets on platforms such as Github.</p>
+                    <h4 class="faq-question">What if I have technical issues with CodaBench?</h4>
+                    <p class="faq-answer">Contact <strong><a href="mailto:contact@codabench.org">CodaBench support</a></strong> for technical issues. For task-specific questions, reach out to the shared task organizers.</p>
                 </div>
 
                 <!-- Paper Requirements -->
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">Do I need to write a paper?</h4>
-                    <p class="faq-answer">Yes, if you register and request the dataset, you agree to submit a paper. It's not just encouraged—it's a binding commitment you make when receiving the data.</p>
+                    <h4 class="faq-question">Do I need to write a paper to participate?</h4>
+                    <p class="faq-answer">Participation in the shared task does not require submitting a paper. However, to present at the workshop, at least one system paper from each team is expected.</p>
                 </div>
 
                 <div class="faq-item fade-in">
-                    <h4 class="faq-question">What happens if I register but don't submit a paper?</h4>
-                    <p class="faq-answer">This is strictly prohibited. You agree to register and submit a paper when requesting the dataset. Abandoning the task after receiving data may result in banning participants from future participation.</p>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">What is the paper format?</h4>
-                    <p class="faq-answer">System papers must follow the format for short papers at NakbaNLP 2026. Papers must follow official LaTeX or Word templates, be up to 4 pages (excluding unlimited references). Check the dedicated paper submission guidelines:
-                        <br><a href="https://lrec2026.info/authors-kit" target="_blank" style="color: #2563eb;">https://lrec2026.info/authors-kit</a>
-                        <br><a href="https://softconf.com/lrec2026/nakbanlp2026" target="_blank" style="color: #2563eb;">https://softconf.com/lrec2026/nakbanlp2026</a>
-                    </p>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">How should the paper title be formatted?</h4>
-                    <p class="faq-answer">Use this format: <strong>&lt;Team Name&gt; at &lt;Shared Task Name&gt;: &lt;Title of the work&gt;</strong>
-                        <br><em>Example: "Scholarly at XYZ Shared Task: LLMs in Detection for Identifying Manipulative Strategies"</em>
-                    </p>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">Must I cite the task overview paper?</h4>
-                    <p class="faq-answer">Yes, each team is required to cite the shared task overview paper in their system paper.</p>
-                </div>
-
-                <!-- Conference Attendance -->
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">Must someone from my team attend the conference?</h4>
-                    <p class="faq-answer">Yes, at least one of the shared task team members should register and attend the conference.</p>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">Must papers be presented at the conference?</h4>
-                    <p class="faq-answer">Yes, all accepted papers must be presented at the conference (in-person or virtual). Papers without at least one presenting author registered by the early registration deadline may be subject to desk rejection.</p>
-                </div>
-
-                <!-- Technical Requirements -->
-                <div class="faq-item fade-in">
-                    <h4 class="faq-question">Do I need a Softconf account?</h4>
-                    <p class="faq-answer">Yes, all participants and organizers are required to create a Softconf account.</p>
+                    <h4 class="faq-question">What should be included in the system paper?</h4>
+                    <p class="faq-answer">System papers should include: <strong>1) Task description understanding, 2) Data exploration and analysis, 3) Methodology and approach, 4) Experimental setup, 5) Results and error analysis, 6) Conclusions and future work</strong>. Papers should be 6-8 pages long.</p>
                 </div>
 
                 <div class="faq-item fade-in">
@@ -442,14 +397,14 @@
             </div>
         </div>
     </section>    
+
     <!-- Organizing Team Section -->
     <section id="organizers">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Our Team</span>
                 <h2>Organizing Committee</h2>
-                <p>For inquiries, please contact: stancenakba@gmail.com </p>
-
+                <p>For inquiries, please contact: <a href="mailto:rafi.almohannadi@hbku.edu.qa">rafi.almohannadi@hbku.edu.qa</a></p>
             </div>
 
             <div class="organizers-grid">
@@ -490,8 +445,7 @@
                 <a href="https://forms.gle/pPA6nS7CWvuNDUjh6" target="_blank" class="btn btn-primary">Register Now</a>
                 <a href="https://www.codabench.org/competitions/12653/" target="_blank" class="btn btn-primary">SubTask A: Actor-Level Stance Detection</a>
                 <a href="https://www.codabench.org/competitions/12662/" target="_blank" class="btn btn-primary">SubTask B: Cross-Topic Stance Detection</a>
-                <!-- <a href="#" class="btn btn-outline">Download Data</a> -->
-                <a href="mailto:stancenakba@gmail.com" class="btn btn-outline">Contact Organizers</a>
+                <a href="mailto:rafi.almohannadi@hbku.edu.qa" class="btn btn-outline">Contact Organizers</a>
             </div>
         </div>
     </section>
@@ -500,22 +454,125 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 StanceNakba Shared Task. All rights reserved.</p>
-            <p>Contact: <a href="mailto:stancenakba@gmail.com">stancenakba@gmail.com</a></p>
+            <p>Contact: <a href="mailto:rafi.almohannadi@hbku.edu.qa">rafi.almohannadi@hbku.edu.qa</a></p>
             <p>This shared task is supported by grant NPRP14C-0916-210015, funded by the Qatar Research, Development and Innovation Council (QRDI) and Qatar National Research Fund (QNRF)</p>
         </div>
     </footer>
 
     <script>
+        // Leaderboard data from evaluation results
+        const leaderboardData = {
+            'a': [
+                { rank: 1, team: 'shroukgbr', f1: '0.9620', accuracy: '0.9621', precision: '0.9620', recall: '0.9622', date: '2026-02-15' },
+                { rank: 2, team: 'yafateam', f1: '0.9525', accuracy: '0.9526', precision: '0.9530', recall: '0.9526', date: '2026-02-15' },
+                { rank: 3, team: 'Team_KUET', f1: '0.9426', accuracy: '0.9431', precision: '0.9445', recall: '0.9431', date: '2026-02-15' },
+                { rank: 4, team: 'KvochurHegel', f1: '0.9384', accuracy: '0.9384', precision: '0.9387', recall: '0.9384', date: '2026-02-15' },
+                { rank: 5, team: 'opti_', f1: '0.9288', accuracy: '0.9289', precision: '0.9288', recall: '0.9290', date: '2026-02-15' },
+                { rank: 6, team: 'viva_palestine', f1: '0.9190', accuracy: '0.9194', precision: '0.9211', recall: '0.9193', date: '2026-02-15' },
+                { rank: 7, team: 'enas_fahmy', f1: '0.8988', accuracy: '0.9005', precision: '0.9015', recall: '0.9004', date: '2026-02-15' },
+                { rank: 8, team: 'sheikhgalib', f1: '0.8804', accuracy: '0.8815', precision: '0.8867', recall: '0.8815', date: '2026-02-15' },
+                { rank: 9, team: 'faisalm93', f1: '0.8650', accuracy: '0.8673', precision: '0.8712', recall: '0.8673', date: '2026-02-15' },
+                { rank: 10, team: 'mehreen', f1: '0.8524', accuracy: '0.8531', precision: '0.8536', recall: '0.8533', date: '2026-02-15' },
+                { rank: 11, team: 'AyahVerse', f1: '0.8321', accuracy: '0.8389', precision: '0.8534', recall: '0.8385', date: '2026-02-15' },
+                { rank: 12, team: 'tasneemduridi', f1: '0.8274', accuracy: '0.8294', precision: '0.8388', recall: '0.8292', date: '2026-02-15' },
+                { rank: 13, team: 'jahidhasan', f1: '0.7451', accuracy: '0.7488', precision: '0.7626', recall: '0.7492', date: '2026-02-15' },
+                { rank: 14, team: 'isic_ham', f1: '0.5938', accuracy: '0.5972', precision: '0.7418', recall: '0.5977', date: '2026-02-15' }
+            ],
+            'b': [
+                { rank: 1, team: 'wafaa', f1: '0.8724', accuracy: '0.8729', precision: '0.8736', recall: '0.8733', date: '2026-02-15' },
+                { rank: 2, team: 'mozalak', f1: '0.8607', accuracy: '0.8619', precision: '0.8639', recall: '0.8597', date: '2026-02-15' },
+                { rank: 3, team: 'U4RASD_nancyhamdan', f1: '0.8601', accuracy: '0.8619', precision: '0.8636', recall: '0.8597', date: '2026-02-15' },
+                { rank: 4, team: 'sarah_yassine', f1: '0.8562', accuracy: '0.8564', precision: '0.8617', recall: '0.8566', date: '2026-02-15' },
+                { rank: 5, team: 'a2nlp', f1: '0.8483', accuracy: '0.8500', precision: '0.8488', recall: '0.8483', date: '2026-02-15' },
+                { rank: 6, team: 'asmaa_q', f1: '0.8328', accuracy: '0.8343', precision: '0.8348', recall: '0.8324', date: '2026-02-15' },
+                { rank: 7, team: 'tokakhaled', f1: '0.8110', accuracy: '0.8122', precision: '0.8216', recall: '0.8118', date: '2026-02-15' },
+                { rank: 8, team: 'AyahVerse', f1: '0.7904', accuracy: '0.7901', precision: '0.7994', recall: '0.7872', date: '2026-02-15' },
+                { rank: 9, team: 'jahidhasan', f1: '0.7407', accuracy: '0.7403', precision: '0.7449', recall: '0.7426', date: '2026-02-15' },
+                { rank: 10, team: 'walisa_alam', f1: '0.7317', accuracy: '0.7348', precision: '0.7347', recall: '0.7341', date: '2026-02-15' }
+            ]
+        };
+
+        // Handle dropdown toggle
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        if (dropdownToggle) {
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownContent.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown-menu')) {
+                    dropdownContent.classList.remove('active');
+                }
+            });
+        }
+
+        // Handle leaderboard opening
+        const leaderboardButtons = document.querySelectorAll('.open-leaderboard');
+        const modal = document.getElementById('leaderboardModal');
+        const modalClose = document.querySelector('.modal-close');
+        const modalTitle = document.getElementById('modalTitle');
+        const leaderboardBody = document.getElementById('leaderboardBody');
+
+        leaderboardButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const task = this.getAttribute('data-task');
+                openLeaderboard(task);
+                dropdownContent.classList.remove('active');
+            });
+        });
+
+        function openLeaderboard(task) {
+            const taskLabel = task === 'a' ? 'SubTask A - Actor-Level Stance Detection' : 'SubTask B - Cross-Topic Stance Detection';
+            modalTitle.textContent = taskLabel;
+            
+            const data = leaderboardData[task];
+            leaderboardBody.innerHTML = data.map(item => `
+                <tr>
+                    <td class="rank-cell">#${item.rank}</td>
+                    <td class="team-cell">${item.team}</td>
+                    <td class="metric-cell highlight">${item.f1}</td>
+                    <td class="metric-cell">${item.accuracy}</td>
+                    <td class="metric-cell">${item.precision}</td>
+                    <td class="metric-cell">${item.recall}</td>
+                    <td class="date-cell">${item.date}</td>
+                </tr>
+            `).join('');
+            
+            modal.classList.add('active');
+        }
+
+        // Close modal
+        if (modalClose) {
+            modalClose.addEventListener('click', function() {
+                modal.classList.remove('active');
+            });
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                const href = this.getAttribute('href');
+                if (href !== '#' && !this.classList.contains('open-leaderboard')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 }
             });
         });
@@ -547,7 +604,7 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
+                if (pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
             });
